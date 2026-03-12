@@ -1,0 +1,4 @@
+gemini:
+  api:
+    key: AIzaSyAYsJzu2XPZggI1HPD3eUtEo36wy2vCa7E
+    url: https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent
