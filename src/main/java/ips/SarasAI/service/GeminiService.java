@@ -13,14 +13,13 @@ import org.springframework.web.client.RestTemplate;
 public class GeminiService {
 
     private final GeminiConfig geminiConfig;
-
+    private final RestTemplate restTemplate;
+    private final HttpHeaders headers;
     public String ask(String message){
 
         try {
 
-            RestTemplate restTemplate = new RestTemplate();
 
-            HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.APPLICATION_JSON);
             headers.set("X-goog-api-key", geminiConfig.getKey());
 

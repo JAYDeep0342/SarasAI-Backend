@@ -1,5 +1,4 @@
 package ips.SarasAI.controller;
-
 import ips.SarasAI.dto.ChatRequestDto;
 import ips.SarasAI.dto.ChatResponseDto;
 import ips.SarasAI.service.ChatService;

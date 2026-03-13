@@ -19,13 +19,12 @@ public class ChatService {
 
     public ChatResponseDto chat(ChatRequestDto request){
 
-        Conversation conversation;
+         Conversation conversation;
 
-        // new chat
         if(request.getConversationId() == null){
 
             conversation = Conversation.builder()
-                    .title(request.getMessage())   // first message = title
+                    .title(request.getMessage())
                     .build();
 
             conversationRepository.save(conversation);
@@ -37,7 +36,6 @@ public class ChatService {
                     .orElseThrow(() -> new RuntimeException("Conversation not found"));
         }
 
-        // save user message
         Message userMessage = Message.builder()
                 .conversation(conversation)
                 .role("USER")
